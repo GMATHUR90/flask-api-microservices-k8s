@@ -4,25 +4,25 @@
 This repository demonstrates how to deploy a Flask-based microservice using Kubernetes. It provides Kubernetes YAML files for managing deployments, services, and persistent storage. This setup is ideal for developers looking to understand how to integrate Flask microservices with Kubernetes for scalable and resilient applications.
 
 ## Features
-**Flask API:** A simple RESTful API built with Flask.
-**Kubernetes Manifests:** YAML files for Deployments, Services, and Persistent Volumes.
-**MongoDB Integration:** Configured MongoDB service with persistent storage.
-**Scalability:** Easily scale the Flask service using Kubernetes.
+- **Flask API:** A simple RESTful API built with Flask.
+- **Kubernetes Manifests:** YAML files for Deployments, Services, and Persistent Volumes.
+- **MongoDB Integration:** Configured MongoDB service with persistent storage.
+- **Scalability:** Easily scale the Flask service using Kubernetes.
 
 ## Architecture
 The application consists of two main components:
 
-**Flask API:** Serves as the backend microservice handling HTTP requests.
-**MongoDB:** Acts as the database for storing and retrieving data.
+- **Flask API:** Serves as the backend microservice handling HTTP requests.
+- **MongoDB:** Acts as the database for storing and retrieving data.
 
 Kubernetes orchestrates the deployment, scaling, and management of these components, ensuring high availability and resilience.
 
 ## Technologies Used
-**Python:** Programming language for the Flask API.
-**Flask:** Web framework for building the API.
-**Kubernetes:** Container orchestration system.
-**MongoDB:** NoSQL database.
-**Helm (optional):** For managing Kubernetes applications.
+- **Python:** Programming language for the Flask API.
+- **Flask:** Web framework for building the API.
+- **Kubernetes:** Container orchestration system.
+- **MongoDB:** NoSQL database.
+- **Helm (optional):** For managing Kubernetes applications.
 
 ## Prerequisites
 Before proceeding, make sure you have `kubeadm` installed on both the master and worker (slave) nodes. You can follow the installation guide here: [Kubeadm Installation Using Containerd](https://github.com/GMATHUR90/kubestarter/blob/main/Kubeadm_Installation_Using_Containerd.md).
