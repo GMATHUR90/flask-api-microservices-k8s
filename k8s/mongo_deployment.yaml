@@ -20,4 +20,10 @@ spec:
           image: mongo
           ports:
             - containerPort: 27017
-    
+          volumeMounts:
+            - name: storge
+              mountPath: /data/db
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc 
