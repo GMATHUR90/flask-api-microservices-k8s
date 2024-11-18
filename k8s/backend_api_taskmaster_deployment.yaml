@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend_api_taskmaster_deployment
+  namespace: taskmaster-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskmaster
+  template:
+    metadata:
+      labels:
+        app: taskmaster
+    spec:
+      containers:
+        - name: taskmaster
+          image: gmathur90/flask-api-taskmaster-k8s
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always 
+
