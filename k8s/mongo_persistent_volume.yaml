@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Persistent Volume
+metadata:
+  name: mongo-pv
+  namespace: mongo-ns
+spec:
+  capacity:
+    storage: 256Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain 
+  hostPath: 
+  path: /home/node/mongodata
