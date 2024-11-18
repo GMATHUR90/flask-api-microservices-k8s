@@ -21,7 +21,7 @@ spec:
           ports:
             - containerPort: 27017
           volumeMounts:
-            - name: storge
+            - name: storage
               mountPath: /data/db
       volumes:
         - name: storage

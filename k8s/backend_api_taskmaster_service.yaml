@@ -4,11 +4,11 @@ metadata:
   name: taskmaster-svc
   namespace: taskmaster-ns
 spec:
-  selectors:
+  selector:
     app: taskmaster
-    ports:
-      - protocol: TCP
-        port:80
-        targetPort: 5000
-        nodePort: 30009
-    type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+      nodePort: 30009
+  type: NodePort
