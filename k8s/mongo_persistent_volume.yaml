@@ -26,7 +26,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  hostpath:
+  hostPath:
     path: /home/node/mongodata/mongo-data-1
 ---
 
@@ -42,7 +42,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  hostpath:
+  hostPath:
     path: /home/node/mongodata/mongo-data-2
 
 
