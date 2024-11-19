@@ -37,7 +37,13 @@ cd flask-microservices-k8s
 Ensure your Kubernetes cluster is running and kubectl is configured to connect to it.
 
 ## Usage
-### 1. Deploy to Kubernetes
+### 1. Path Availability: 
+Ensure the hostPath specified in the mongo-pv (/home/node/mongodata) exists on the host node and is writable. If the directory does not exist, create it:
+```bash
+sudo mkdir -p /home/node/mongodata
+sudo chmod 777 /home/node/mongodata
+```
+### 2. Deploy to Kubernetes
 Apply the Kubernetes manifests to deploy the Flask API and MongoDB.
 ```bash
 kubectl apply -f k8s/mongo-pv.yml
@@ -46,7 +52,7 @@ kubectl apply -f k8s/mongo-svc.yml
 kubectl apply -f k8s/flask-deployment.yml
 kubectl apply -f k8s/flask-svc.yml
 ```
-### 2. Access the Flask API
+### 3. Access the Flask API
 Once deployed, you can access the Flask API using the service's external IP .
 
 Visit http://localhost:5000 in your browser interact with the API.
