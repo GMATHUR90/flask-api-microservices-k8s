@@ -22,11 +22,11 @@ spec:
             - containerPort: 27017
           volumeMounts:
             - name: storage-0
-              mountPath: /data/db
+              mountPath: /data/db0
             - name: storage-1
-              mountPath: /data/db
+              mountPath: /data/db1
             - name: storage-2
-              mountPath: /data/db
+              mountPath: /data/db2
       volumes:
         - name: storage-0
           persistentVolumeClaim:
