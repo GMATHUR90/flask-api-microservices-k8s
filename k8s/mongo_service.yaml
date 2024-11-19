@@ -6,6 +6,7 @@ metadata:
   labels:
     app: mongo
 spec:
+  clusterIP: None # Headless service, no cluster IP
   ports:
     - port: 27017
       targetPort: 27017

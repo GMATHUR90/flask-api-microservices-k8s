@@ -11,7 +11,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain 
   hostPath: 
-    path: /home/node/mongodata/mongodata-0
+    path: /home/node/mongodata/mongo-data-0
 ---
 
 apiVersion: v1
